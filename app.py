@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads/' 
 
 # Whisperモデルのロード
-model = whisper.load_model("base")
+model = Whisper(model_name="base")
 
 @app.route('/', methods=['POST', 'GET'])
 def home():
